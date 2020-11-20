@@ -1,0 +1,23 @@
+public class MovieLength
+{
+  int minuteLength;
+  
+  public MovieLength(int min)
+  {
+    minuteLength = min;
+  }
+  
+  public double hourLength()
+  {
+    double hours = (double)minuteLength / 60.0;
+    return hours;
+  }
+  
+  public int[] hrsMinLength()
+  {
+    int hours = minuteLength / 60;
+    int minutes = minuteLength - (hours*60);
+    int[] hrMin = {hours, minutes};
+    return hrMin;
+  }
+}
